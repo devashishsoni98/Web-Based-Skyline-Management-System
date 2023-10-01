@@ -11,12 +11,36 @@ input[type="number"] {
 }
 
 * {
-    font-family: "Merienda", cursive;
-    font-family: "Poppins", sans-serif;
-    font-family: "Ubuntu", sans-serif;
-  }
+  font-family: "Merienda", cursive;
+  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
 
-  
-  .h-font {
-    font-family: "Merienda", cursive;
+.h-font {
+  font-family: "Merienda", cursive;
+}
+
+.custom-bg {
+  background-color: #2ec1ac;
+}
+.custom-bg:hover {
+  background-color: #279e8c;
+}
+
+/* Availability Form */
+.fw-5 {
+  font-weight: 500;
+}
+
+.availability-form {
+  margin-top: -3rem;
+  z-index: 2;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .availability-form {
+    margin-top: 25px;
+    padding: 0 35px;
   }
+}
