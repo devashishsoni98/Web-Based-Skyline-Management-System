@@ -22,9 +22,11 @@ input[type="number"] {
 
 .custom-bg {
   background-color: #2ec1ac;
+  border: 1px solid #2ec1ac;
 }
 .custom-bg:hover {
   background-color: #279e8c;
+  border: 1px solid #279e8c;
 }
 
 /* Availability Form */
