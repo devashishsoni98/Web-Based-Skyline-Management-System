@@ -1,3 +1,19 @@
+/* IMport fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Gafata&family=Hind+Siliguri:wght@400;500;700&family=Montserrat+Alternates:wght@200;400;600&display=swap");
+
+body {
+  background: linear-gradient(to right , #ffffffee , #f1f6f7);
+  font-family: "Hind Siliguri", sans-serif !important;
+}
+
+.sub-head {
+  font-family: "Gafata", sans-serif !important;
+}
+
+.para-head {
+  font-family: "Montserrat Alternates", sans-serif !important;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -11,13 +27,13 @@ input[type="number"] {
 }
 
 * {
-  font-family: "Merienda", cursive;
+  /* font-family: "Merienda", cursive;
   font-family: "Poppins", sans-serif;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Ubuntu", sans-serif; */
 }
 
 .h-font {
-  font-family: "Merienda", cursive;
+  /* font-family: "Merienda", cursive; */
 }
 
 .custom-bg {
