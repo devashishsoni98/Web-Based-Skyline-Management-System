@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skyline - About</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <div id="links"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body class="bg-light">
+    <!-- Navbar -->
+    <div id="header"></div>
+
+    <div class="my-5 px-4">
+      <h2 class="fw-bold h-font text-center">About Us</h2>
+      <div class="h-line bg-dark"></div>
+      <p class="text-center mt-3">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quis
+        quaerat sunt <br />
+        quam nisi voluptate, veniam quidem saepe quos laborum!
+      </p>
+    </div>
+
+    
+      
+
+
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        keyboard: {
+          enabled: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      var swiper = new Swiper(".swiper-testimonials", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        slidesPerView: "3",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        keyboard: {
+          enabled: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: "1",
+          },
+          640: {
+            slidesPerView: "1",
+          },
+          768: {
+            slidesPerView: "2",
+          },
+          1024: {
+            slidesPerView: "3",
+          },
+        },
+      });
+    </script>
+
+    <script>
+      $(function () {
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+        $("#links").load("links.html");
+      });
+    </script>
+  </body>
+</html>
