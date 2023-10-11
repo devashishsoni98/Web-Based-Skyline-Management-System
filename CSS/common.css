@@ -15,8 +15,8 @@ body {
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-.custom-btn,
+input::-webkit-inner-spin-.custom-btn {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -72,4 +72,51 @@ input[type="number"] {
     margin-top: 25px;
     padding: 0 35px;
   }
+}
+
+
+
+/*Facilities*/
+
+.custom-btn {
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  padding: 0.7em 2em;
+  border: 1px solid black;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+.custom-btn:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: black;
+  z-index: -1;
+}
+
+.custom-btn:hover, .custom-btn:focus {
+  color: white;
+}
+
+.custom-btn:hover:before, .custom-btn:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.custom-btn:active {
+  transform: scale(0.9);
 }
