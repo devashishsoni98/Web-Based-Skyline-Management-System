@@ -119,3 +119,12 @@ input[type="number"] {
 .custom-btn:active {
   transform: scale(0.9);
 }
+
+/* Footer */
+.effect{
+  transition: 0.4s ease-in-out;
+}
+.effect:hover{
+  transition: 0.4s ease;
+  transform: translateX(.5rem);
+}
