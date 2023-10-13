@@ -28,7 +28,7 @@ input[type="number"] {
 
 :root{
   --teal: #2ec1ac ;
-  --teal_hover:#279e8c;
+  --teal_hover:#147667;
 }
 
 * {
@@ -56,7 +56,15 @@ input[type="number"] {
   border: 1px solid var(--teal_hover);
 }
 
-/* Availability Form */
+.badge:hover{
+  cursor: pointer;
+}
+
+.smooth{
+  transition: .3s ease-in-out;
+}
+
+/*INDEX PAGE*/
 .fw-5 {
   font-weight: 500;
 }
@@ -73,10 +81,6 @@ input[type="number"] {
     padding: 0 35px;
   }
 }
-
-
-
-/*Facilities*/
 
 .custom-btn {
   text-transform: uppercase;
@@ -119,6 +123,69 @@ input[type="number"] {
 .custom-btn:active {
   transform: scale(0.9);
 }
+
+.custom-btn-g {
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+.custom-btn-g:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: var(--teal_hover);
+  z-index: -1;
+}
+
+.custom-btn-g:hover, .custom-btn-g:focus {
+  color: white;
+}
+
+.custom-btn-g:hover:before, .custom-btn-g:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.custom-btn-g:active {
+  transform: scale(0.9);
+}
+
+
+.click-effect{
+  transition: .2s ease-in-out;
+}
+.click-effect:hover{
+  transform: scale(0.9);
+}
+
+
+.hover-effect{
+  transition: .25s ease-in-out;
+}
+.hover-effect:hover{
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+
+/* FACILITIES */
+
+
 
 /* Footer */
 .effect{
