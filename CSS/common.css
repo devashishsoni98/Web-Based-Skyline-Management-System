@@ -195,7 +195,19 @@ input[type="number"] {
 
 
 
-/* FACILITIES */
+/* CONTACT */
+
+.contact-img{
+  width:24.255rem;
+  margin-left: auto;
+  margin-right: auto; 
+  display: block;
+}
+@media screen and (max-width: 999px){
+  .contact-img{
+    width: -webkit-fill-available;
+  }
+}
 
 
 
