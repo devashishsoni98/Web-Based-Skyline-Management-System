@@ -185,6 +185,14 @@ input[type="number"] {
   cursor: pointer;
 }
 
+.hover-effect-md{
+  transition: .25s ease-in-out;
+}
+.hover-effect-md:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .hover-effect-sm{
   transition: .3s ease-in-out;
 }
