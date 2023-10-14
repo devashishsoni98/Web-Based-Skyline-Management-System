@@ -64,6 +64,9 @@ input[type="number"] {
   transition: .3s ease-in-out;
 }
 
+.c-pointer{
+  cursor: pointer;
+}
 /*INDEX PAGE*/
 .fw-5 {
   font-weight: 500;
@@ -181,6 +184,15 @@ input[type="number"] {
   transform: scale(1.15);
   cursor: pointer;
 }
+
+.hover-effect-sm{
+  transition: .3s ease-in-out;
+}
+.hover-effect-sm:hover{
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
 
 
 /* FACILITIES */
