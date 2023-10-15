@@ -217,6 +217,17 @@ input[type="number"] {
   }
 }
 
+/* ROOMS */
+
+/* .accent-col{
+  -webkit-appearance: auto;
+  accent-color: var(--teal);
+} */
+
+.form-check-input:checked {
+  background-color: var(--teal);
+  border-color: var(--teal);
+}
 
 
 /* Footer */
