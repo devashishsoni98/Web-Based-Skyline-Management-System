@@ -67,6 +67,11 @@ input[type="number"] {
 .c-pointer{
   cursor: pointer;
 }
+
+.border-effect:hover{
+  border: 1px solid var(--teal_hover);
+  transition: .1s ease-in-out;
+}
 /*INDEX PAGE*/
 .fw-5 {
   font-weight: 500;
