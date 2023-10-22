@@ -72,6 +72,20 @@ input[type="number"] {
   border: 1px solid var(--teal_hover);
   transition: .1s ease-in-out;
 }
+:root {
+  --shadow: var(--teal);
+  --scrollbarBG: #eee;
+  --thumbBG: var(--teal_hover);
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--teal);
+}
 /*INDEX PAGE*/
 .fw-5 {
   font-weight: 500;
