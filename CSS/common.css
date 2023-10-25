@@ -42,9 +42,9 @@ input[type="number"] {
 }
 
 .h-line{
-  width: 150px;
+  width: 180px;
   margin: 0 auto;
-  height: 1.7px;
+  height: 2px;
 }
 
 .custom-bg {
