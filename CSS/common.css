@@ -97,6 +97,69 @@ input[type="number"] {
   position: relative;
 }
 
+/* ---Nab-link-hover-- */
+
+.n-hover {
+  background-image: linear-gradient(
+    to right,
+    #2ec1ac,
+    #2ec1ac 50%,
+    #000 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 1px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.n-hover:before {
+  content: '';
+  background: #2ec1ac;
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.n-hover:hover {
+ background-position: 0;
+}
+
+.n-hover:hover::before {
+  width:100%;
+}
+
+.n-hover:active{
+  color: #2ec1ac;
+}
+
+/* .n-hover::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background-color: #18272F;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+.n-hover:hover::before{
+  transform-origin: left;
+  transform: scaleX(1);
+} */
+
+/* ---Media Query-- */
+
 @media screen and (max-width: 768px) {
   .availability-form {
     margin-top: 25px;
