@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Gafata&family=Hind+Siliguri:wght@400;500;700&family=Montserrat+Alternates:wght@200;400;600&display=swap");
 
 body {
-  background: linear-gradient(to right , #ffffffee , #f1f6f7);
+  /* background: linear-gradient(to right , #ffffffee , #f1f6f7); */
+  background: #ededed;
   font-family: "Hind Siliguri", sans-serif !important;
 }
 
