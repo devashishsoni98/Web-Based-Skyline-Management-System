@@ -48,6 +48,17 @@ input[type="number"] {
   background: var(--teal);
 }
 
+.nav-shadow{
+  box-shadow: 0px 1px 2px #e1e1e1 !important;
+}
+.nav-shadow-box{
+  box-shadow: 0px 1.5px 2px #e1e1e1 !important;
+}
+
+.footer-bg{
+  color: #171717;
+  background-color: #e8e8e8 !important;
+}
 
 
 .h-font {
