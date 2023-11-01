@@ -99,7 +99,12 @@ input[type="number"] {
 ::-webkit-scrollbar-thumb {
   background-color: var(--teal);
 }
-
+/* For Firefox */
+*{
+  scrollbar-color: var(--teal) var(--scrollbarBG);
+  scroll-behavior: smooth;
+  scrollbar-width: auto;
+}
 /*INDEX PAGE*/
 .fw-5 {
   font-weight: 500;
