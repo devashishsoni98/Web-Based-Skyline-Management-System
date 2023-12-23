@@ -7,6 +7,17 @@ body {
   font-family: "Hind Siliguri", sans-serif !important;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.top-space{
+  padding-top: 60px;
+}
+
 .sub-head {
   font-family: "Gafata", sans-serif !important;
 }
@@ -32,12 +43,6 @@ input[type="number"] {
   --teal_hover:#147667;
 }
 
-* {
-  /* font-family: "Merienda", cursive;
-  font-family: "Poppins", sans-serif;
-  font-family: "Ubuntu", sans-serif; */
-}
-
 ::-moz-selection { /* Code for Firefox */
   color: white;
   background: var(--teal);
@@ -61,9 +66,9 @@ input[type="number"] {
 }
 
 
-.h-font {
+/* .h-font { */
   /* font-family: "Merienda", cursive; */
-}
+/* } */
 
 .h-line{
   width: 180px;
