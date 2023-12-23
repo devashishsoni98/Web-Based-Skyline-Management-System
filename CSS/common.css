@@ -294,6 +294,10 @@ input[type="number"] {
   cursor: pointer;
 }
 
+.min-h-cards{
+  min-height: 100%;
+}
+
 
 
 /* CONTACT */
