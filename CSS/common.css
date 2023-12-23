@@ -24,7 +24,7 @@ input::-webkit-inner-spin-.custom-btn {
 
 /* Firefox */
 input[type="number"] {
-  -moz-appearance: textfield;
+  --moz-appearance: textfield;
 }
 
 :root{
