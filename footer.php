@@ -8,19 +8,19 @@
       </div>
       <div class="col-lg-4 p-4 footer-link">
         <h5 class="mb-3">Links</h5>
-        <a href="index.html" class="d-inline-block mb-2 text-dark text-decoration-none effect"
+        <a href="index.php" class="d-inline-block mb-2 text-dark text-decoration-none effect"
           >Home</a
         ><br />
-        <a href="facilities.html" class="d-inline-block mb-2 text-dark text-decoration-none effect"
+        <a href="facilities.php" class="d-inline-block mb-2 text-dark text-decoration-none effect"
           >Facilities</a
         ><br />
-        <a href="rooms.html" class="d-inline-block mb-2 text-dark text-decoration-none effect"
+        <a href="rooms.php" class="d-inline-block mb-2 text-dark text-decoration-none effect"
           >Rooms</a
         ><br />
-        <a href="contact.html" class="d-inline-block mb-2 text-dark text-decoration-none effect"
+        <a href="contact.php" class="d-inline-block mb-2 text-dark text-decoration-none effect"
           >Contact Us</a
         ><br />
-        <a href="about.html" class="d-inline-block mb-2 text-dark text-decoration-none effect"
+        <a href="about.php" class="d-inline-block mb-2 text-dark text-decoration-none effect"
           >About</a
         >
       </div>

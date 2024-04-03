@@ -13,13 +13,15 @@
       referrerpolicy="no-referrer"
     />
 
-    <div id="links"></div>
+    <!-- <div id="links"></div> -->
+    <?php require('links.php'); ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 
   <body class="bg-light">
     <!-- Navbar -->
-    <div id="header"></div>
+    <!-- <div id="header"></div> -->
+    <?php require('header.php'); ?>
 
     <div class="my-5 px-4 top-space">
       <h2 class="fw-bold h-font text-center">Our Rooms</h2>
@@ -314,7 +316,8 @@
       </div>
     </div>
 
-    <div id="footer"></div>
+    <!-- <div id="footer"></div> -->
+    <?php require('footer.php'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
@@ -377,12 +380,12 @@
       });
     </script>
 
-    <script>
+    <!-- <script>
       $(function () {
         $("#header").load("header.html");
         $("#footer").load("footer.html");
         $("#links").load("links.html");
       });
-    </script>
+    </script> -->
   </body>
 </html>

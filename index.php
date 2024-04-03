@@ -18,13 +18,15 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
 
-    <div id="links"></div>
+    <!-- <div id="links"></div> -->
+    <?php require('links.php'); ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 
   <body class="bg-light">
     <!-- Navbar -->
-    <div id="header"></div>
+    <!-- <div id="header"></div> -->
+    <?php require('header.php'); ?>
 
     <!-- Carousel -->
     <div class="container-fluid px-lg-4 mt-4 top-space">
@@ -529,7 +531,8 @@
       </div>
     </div>
 
-    <div id="footer"></div>
+    <!-- <div id="footer"></div> -->
+    <?php require('footer.php'); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
@@ -592,13 +595,13 @@
       });
     </script>
 
-    <script>
+    <!-- <script>
       $(function () {
         $("#header").load("header.html");
         $("#footer").load("footer.html");
         $("#links").load("links.html");
         $("#about").load("about.html");
       });
-    </script>
+    </script> -->
   </body>
 </html>
