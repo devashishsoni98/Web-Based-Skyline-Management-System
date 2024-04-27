@@ -1,6 +1,6 @@
 <?php
 
-$hname='localhost';
+$hname='localhost:3307';
 $uname='root';
 $pass='';
 $db='skyline-website';
@@ -8,7 +8,7 @@ $db='skyline-website';
 $con = mysqli_connect($hname, $uname, $pass, $db);
 
 if(!$con){
-    die('Cannot COnnect Database'.mysqli_connect_errno());
+    die('Cannot Connect Database'.mysqli_connect_error());
 }
 
 function filteration($data){
@@ -22,12 +22,12 @@ function filteration($data){
     return $data;
 }
 
-function select($sql, $values, $dataypes){
+function select($sql,$values,$dataypes){
 
     $con = $GLOBALS['con'];
 
- if($stmt = mysqli_prepare($con, $sql)){
-mysqli_stmt_bind_param($stmt,$dataypes, ...$values);
+ if($stmt = mysqli_prepare($con,$sql)){
+mysqli_stmt_bind_param($stmt,$dataypes,...$values);
 if(mysqli_stmt_execute($stmt)){
     $res = mysqli_stmt_get_result($stmt);
     mysqli_stmt_close($stmt);
@@ -35,12 +35,35 @@ if(mysqli_stmt_execute($stmt)){
 }
 else{
     mysqli_stmt_close($stmt);
-    die('Quesry cnanot be prepared-Select');
+    die('Query cannot be executed - Select');
 }
     }
     else{
-        die("Query cannot be executed - Select");
+        die("Query cannot be prepared - Select");
     }
 }
+
+function update($sql,$values,$dataypes){
+
+    $con = $GLOBALS['con'];
+
+ if($stmt = mysqli_prepare($con,$sql)){
+mysqli_stmt_bind_param($stmt,$dataypes,...$values);
+if(mysqli_stmt_execute($stmt)){
+    $res = mysqli_stmt_affected_rows($stmt);
+    mysqli_stmt_close($stmt);
+    return $res;
+}
+else{
+    mysqli_stmt_close($stmt);
+    die('Query cannot be executed - Update');
+}
+    }
+    else{
+        die("Query cannot be prepared - Update");
+    }
+}
+
+
 
 ?>

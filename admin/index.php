@@ -4,10 +4,7 @@ require ("essentials.php");
 
 session_start();
     if((isset($_SESSION['adminLogin']) && $_SESSION['adminLogin']==true)){
-        echo "<script>
-        window.location.href='dashboard.php';
-    </script>
-    ";
+        redirect('dashboard.php');
 }
 
 ?>
@@ -58,7 +55,7 @@ session_start();
 
         $frm_data = filteration($_POST);
 
-        $query = "SELECT * FROM `admin_cred` WHERE `admin_name`=?  AND `admin_pass`=? ";
+        $query = "SELECT * FROM `admin_cred` WHERE `admin_name`=?  AND `admin_pass`=?";
         $values = [$frm_data['admin_name'], $frm_data['admin_pass']];
 
         $res = select($query, $values, "ss");
@@ -66,12 +63,11 @@ session_start();
 
         if ($res->num_rows == 1) {
             $row = mysqli_fetch_assoc($res);
-            session_start();
             $_SESSION['adminLogin'] = true;
-            $_SESSION['adminId'] = $row['sr_no'];
+            $_SESSION['adminId'] = $row['sr_no.'];
             redirect('dashboard.php');
         } else {
-            alert('error', 'Login fails- Invalid Credentails! ');
+            alert('error', 'Login failed - Invalid Credentails! ');
         }
     }
 
