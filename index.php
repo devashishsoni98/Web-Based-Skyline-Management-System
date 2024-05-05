@@ -482,6 +482,7 @@
     </div>
 
     <!-- Reach US -->
+
     <h2 class="mt-5 pt-4 mb-4 text-center font-bold h-font">Reach Us</h2>
 
     <div class="container">
@@ -490,7 +491,7 @@
           <iframe
             class="w-100 rounded"
             height="450"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.43601926818!2d75.6257413976361!3d26.88542139302607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1696496073685!5m2!1sen!2sin"
+            src="<?php echo $contact_r['iframe'] ?>"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
@@ -499,29 +500,41 @@
           <div class="bg-white p-4 rounded mb-4">
             <h5>Call Us</h5>
             <a
-              href="tel: +91999999999"
+              href="tel: +<?php echo $contact_r['pn1'] ?>"
               class="d-inline-block mb-2 text-decoration-none text-dark click-effect"
-              ><i class="bi bi-telephone-fill"></i> +91999999999</a
+              ><i class="bi bi-telephone-fill"></i> +<?php echo $contact_r['pn1'] ?></a
             ><br />
-            <a
-              href="tel: +91999999999"
-              class="d-inline-block text-decoration-none text-dark click-effect"
-              ><i class="bi bi-telephone-fill"></i> +91999999999</a
-            >
+            <?php 
+              if($contact_r['pn2']!=''){
+                echo<<<data
+                <a
+                  href="tel: +$contact_r[pn2]"
+                  class="d-inline-block text-decoration-none text-dark click-effect"
+                  ><i class="bi bi-telephone-fill"></i> +$contact_r[pn2]</a
+                >
+                data;
+              }
+            ?>
           </div>
           <div class="bg-white p-4 rounded mb-4">
             <h5>Follow Us</h5>
-            <a href="#" class="d-inline-block mb-3">
-              <span class="badge bg-light text-dark fs-6 p-2 click-effect"
-                ><i class="bi bi-twitter me-1"></i> Twitter</span
-              > </a
-            ><br />
-            <a href="#" class="d-inline-block mb-3">
+            <?php 
+              if($contact_r['tw']!=''){
+                echo<<<data
+                <a href="$contact_r[tw]" class="d-inline-block mb-3">
+                  <span class="badge bg-light text-dark fs-6 p-2 click-effect"
+                    ><i class="bi bi-twitter me-1"></i> Twitter</span
+                  > </a
+                ><br />
+                data;
+              }
+            ?>
+            <a href="<?php echo $contact_r['fb'] ?>" class="d-inline-block mb-3">
               <span class="badge bg-light text-dark fs-6 p-2 click-effect"
                 ><i class="bi bi-facebook me-1"></i> Facebook</span
               > </a
             ><br />
-            <a href="#" class="d-inline-block">
+            <a href="<?php echo $contact_r['insta'] ?>" class="d-inline-block">
               <span class="badge bg-light text-dark fs-6 p-2 click-effect"
                 ><i class="bi bi-instagram me-1"></i> Instagram</span
               > </a

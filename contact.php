@@ -38,7 +38,7 @@
             <iframe
               class="w-100 rounded mb-4"
               height="450"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.43601926818!2d75.6257413976361!3d26.88542139302607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1696496073685!5m2!1sen!2sin"
+              src="<?php echo $contact_r['iframe'] ?>"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -47,51 +47,57 @@
             <div class="effect">
             <i class="bi bi-geo-alt-fill"></i
             ><a
-              href="https://maps.app.goo.gl/jhXSqsSmHRxwJ1936"
+              href="<?php echo $contact_r['gmap'] ?>"
               target="_blank"
               class="d-inline-block text-decoration-none text-dark mb-2"
             >
-               Skyline, Jaipur, Rajsthan
+            <?php echo $contact_r['address'] ?>
             </a>
           </div>
 
             <h5 class="mt-2">Call Us</h5>
             <div class="effect">
             <a
-              href="tel: +91999999999"
+              href="tel: +<?php echo $contact_r['pn1'] ?>"
               class="d-inline-block mb-2 text-decoration-none text-dark"
-              ><i class="bi bi-telephone-fill"></i> +91999999999</a
+              ><i class="bi bi-telephone-fill"></i> +<?php echo $contact_r['pn1'] ?></a
             ></div>
-            <div class="effect">
-            <a
-              href="tel: +91999999999"
-              class="d-inline-block text-decoration-none text-dark"
-              ><i class="bi bi-telephone-fill"></i> +91999999999</a
-            >
-          </div>
+            <?php 
+              if($contact_r['pn2']!=''){
+                echo<<<data
+                <div class="effect"><a href="tel: +$contact_r[pn2]" class="d-inline-block text-decoration-none text-dark"><i class="bi bi-telephone-fill"></i> +$contact_r[pn2]</a></div>
+                data;
+              }
+            ?>
 
           <h5 class="mt-4">Email</h5>
           <div class="effect">
             <i class="bi bi-envelope-fill"></i>
             <a
-              href="mailto: vaman.jain17@gmail.com"
+              href="mailto: <?php echo $contact_r['email'] ?>"
               class="d-inline-block mb-2 text-decoration-none text-dark"
-              >Skyline@gmail.com</a
+              ><?php echo $contact_r['email'] ?></a
             >
           </div>
 
             <h5 class="mt-2">Follow Us</h5>
-            <a href="#" class="d-inline-block mb-3">
-              <span class="badge bg-light text-dark fs-6 p-2 hover-effect"
-                ><i class="bi bi-twitter"></i
-              ></span>
-            </a>
-            <a href="#" class="d-inline-block mb-3">
+            <?php 
+              if($contact_r['tw']!=''){
+                echo<<<data
+                <a href="$contact_r[tw]" class="d-inline-block mb-3">
+                  <span class="badge bg-light text-dark fs-6 p-2 hover-effect"
+                    ><i class="bi bi-twitter"></i
+                  ></span>
+                </a>
+                data;
+              }
+            ?>
+            <a href="<?php echo $contact_r['fb'] ?>" class="d-inline-block mb-3">
               <span class="badge bg-light text-dark fs-6 p-2 hover-effect"
                 ><i class="bi bi-facebook"></i
               ></span>
             </a>
-            <a href="#" class="d-inline-block mb-3">
+            <a href="<?php echo $contact_r['insta'] ?>" class="d-inline-block mb-3">
               <span class="badge bg-light text-dark fs-6 p-2 hover-effect"
                 ><i class="bi bi-instagram"></i
               ></span>

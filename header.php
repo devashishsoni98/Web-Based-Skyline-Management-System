@@ -1,6 +1,15 @@
+<?php
+  require('admin/db_config.php');
+  require('admin/essentials.php');
+
+  $contact_q = "SELECT * FROM `contact_details` WHERE `sr_no.`=?";
+  $values = [1];
+  $contact_r = mysqli_fetch_assoc(select($contact_q,$values,'i'));
+?>
+
 <nav
 class="navbar navbar-expand-lg bg-white px-lg-3 py-lg-2 nav-shadow sticky"
-id="NavBar"
+id="nav-bar"
 >
 <div class="container-fluid">
   <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php"
@@ -20,7 +29,7 @@ id="NavBar"
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link active me-2  n-hover" aria-current="page" href="index.php"
+        <a class="nav-link me-2 n-hover" href="index.php"
           >Home</a
         >
       </li>
